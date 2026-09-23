@@ -29,6 +29,8 @@ class TicketOut(BaseModel):
     priority: Priority | None = None
     category: str | None = None
     draft_reply: str | None = None
+    reviewer: str | None = None
+    review_note: str | None = None
     agent_trace: list[dict[str, Any]] = []
     created_at: datetime | None = None
     updated_at: datetime | None = None

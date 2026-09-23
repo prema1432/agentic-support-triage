@@ -25,6 +25,8 @@ def _ticket_out(doc: dict) -> TicketOut:
         priority=doc.get("priority"),
         category=doc.get("category"),
         draft_reply=doc.get("draft_reply"),
+        reviewer=doc.get("reviewer"),
+        review_note=doc.get("review_note"),
         agent_trace=doc.get("agent_trace", []),
         created_at=doc.get("created_at"),
         updated_at=doc.get("updated_at"),
