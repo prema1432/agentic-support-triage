@@ -126,5 +126,5 @@ async def approve_ticket(
         {"_id": oid},
         {"$set": {"status": new_status, "reviewer": payload.reviewer, "review_note": payload.note, "updated_at": now}},
     )
-    doc.update({"status": new_status})
+    doc.update({"status": new_status, "reviewer": payload.reviewer, "review_note": payload.note})
     return _ticket_out(doc)
